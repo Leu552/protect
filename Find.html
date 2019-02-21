@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="div-Find">
+				<input class="active" type="button" value="家寻宝贝" id="input1"/>
+				<input type="button" value="家寻宝贝" id="input2"/>
+				<div style="display: block;" id="Fdiv1">
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="image/TIM截图20190106191241.png">
+					            <div class="mui-media-body">
+					                黄俊琦
+					                <p class="mui-ellipsis">男<br />1995年1月22日出生<br />广东东莞市寮步镇东林制衣厂<br />身高178cm左右，很瘦，性格内向，不喜欢与人交流</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="image/TIM截图20190106192534.png">
+					            <div class="mui-media-body">
+					                陈有花
+					                <p class="mui-ellipsis">女<br />1983年1月9日出生<br />湖南娄底<br />身高1米55左右</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="image/TIM截图20190106192845.png">
+					            <div class="mui-media-body">
+					                万波
+					                <p class="mui-ellipsis">男<br />1987年10月3日出生<br />河北石家庄藁城区常安镇黄家庄华龙体育学校<br />无明显特征</p>
+					            </div>
+					        </a>
+					    </li>
+					</ul>
+				</div>
+				<div id="Fdiv2">
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="image/TIM截图20190106193358.png">
+					            <div class="mui-media-body">
+					                王江涛
+					                <p class="mui-ellipsis">女<br />1997年5月6日出生<br />山西运城恒曲县山西省运城市恒曲县村子</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="image/TIM截图20190106193556.png">
+					            <div class="mui-media-body">
+					                唐浩鸣
+					                <p class="mui-ellipsis">男<br />2005年1月8日出生<br />重庆辖区合川区清平镇新木村<br />皮肤偏黑，左边脸有颗痣</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="image/TIM截图20190106193803.png">
+					            <div class="mui-media-body">
+					                黄丽芳
+					                <p class="mui-ellipsis">女<br />1992年6月16日出生<br />河北石家庄<br />于河北石家庄藁城被抱养</p>
+					            </div>
+					        </a>
+					    </li>
+					</ul>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var Div = document.getElementById('div-Find');
+			var aBtn = Div.getElementsByTagName('input');
+			var aDiv = new Array(2);
+			aDiv[0] = document.getElementById('Fdiv1');
+			aDiv[1] = document.getElementById('Fdiv2');
+			for(var i= 0;i<aBtn.length;i++)
+			{
+				aBtn[i].index = i;
+				aBtn[i].onclick = function(){
+//					aBtn[i].style.borderBottomColor = red;
+					for(var i =0;i<aBtn.length;i++){
+						aBtn[i].className = '';
+						aDiv[i].style.display = 'none';
+					}
+					this.className = 'active';
+					aDiv[this.index].style.display = 'block';
+				};
+			}
+		</script>
+	</body>
+
+</html>
